@@ -5,7 +5,7 @@ const { updateBooksById } = require("./route/updateBooks");
 const { deleteBooksById } = require("./route/deleteBooks");
 
 const PORT = 22;
-const HOST = "20.2.81.27";
+const HOST = "0.0.0.0";
 
 const init = async () => {
 	const server = hapi.server({
