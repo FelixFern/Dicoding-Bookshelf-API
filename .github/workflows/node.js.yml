@@ -33,9 +33,8 @@ jobs:
                   host: ${{secrets.AZURE_VM_IP}}
                   username: ${{secrets.AZURE_VM_USERNAME}}
                   script: |
-                      whoami
                       pm2 delete all 
                       cd Dicoding-Bookshelf-API
                       git pull
                       npm install
-                      pm2 start npm -- start
+                      pm2 start "npm run start"
