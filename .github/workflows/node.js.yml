@@ -35,8 +35,8 @@ jobs:
                   script: |
                       node -v
                       npm install -g pm2
-                      pm2 delete all 
+                      /home/felixfern/.nvm/versions/node/v18.16.0/bin/pm2 delete all 
                       cd Dicoding-Bookshelf-API
                       git pull
                       npm install
-                      pm2 start "npm run start"
+                      /home/felixfern/.nvm/versions/node/v18.16.0/bin/pm2 start "npm run start"
