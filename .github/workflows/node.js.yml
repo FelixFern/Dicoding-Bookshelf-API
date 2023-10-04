@@ -34,8 +34,8 @@ jobs:
                   username: ${{secrets.AZURE_VM_USERNAME}}
                   script: |
                       node -v
-                      /home/felixfern/.nvm/versions/node/v18.16.0/bin/pm2 delete all 
+                      /home/${{secrets.AZURE_VM_USERNAME}}/.nvm/versions/node/v18.16.0/bin/pm2 delete all 
                       cd Dicoding-Bookshelf-API
                       git pull
                       npm install
-                      /home/felixfern/.nvm/versions/node/v18.16.0/bin/pm2 start "npm run start"
+                      /home/${{secrets.AZURE_VM_USERNAME}}/.nvm/versions/node/v18.16.0/bin/pm2 start "npm run start"
