@@ -33,6 +33,7 @@ jobs:
                   host: ${{secrets.AZURE_VM_IP}}
                   username: ${{secrets.AZURE_VM_USERNAME}}
                   script: |
+                      node -v
                       pm2 delete all 
                       cd Dicoding-Bookshelf-API
                       git pull
