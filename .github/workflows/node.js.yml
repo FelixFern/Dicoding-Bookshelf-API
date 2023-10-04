@@ -34,7 +34,6 @@ jobs:
                   username: ${{secrets.AZURE_VM_USERNAME}}
                   script: |
                       node -v
-                      npm install -g pm2
                       /home/felixfern/.nvm/versions/node/v18.16.0/bin/pm2 delete all 
                       cd Dicoding-Bookshelf-API
                       git pull
